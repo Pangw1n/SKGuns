@@ -1,0 +1,986 @@
+#Version: 1.1.3
+
+#/give @p pillager_spawn_egg{EntityTag:{id:"minecraft:pillager",CustomName:"\"Bandit\"",CustomNameVisible:0,PersistenceRequired:1b,HandItems:[{},{id:"minecraft:crossbow",Count:1}]}}
+
+#Defaults
+  #Pistols
+   #/skgunsgive <Player> 1 8 0.5 0.5 6 0.1 none
+   #/skgunsgive <Player> 2 5 1.5 0.3 12 0.5 none
+   #/skgunsgive <Player> 3 2 1.5 0.1 20 1 none
+  #Rifles
+   #/skgunsgive <Player> 11 10 1.5 0.3 25 0.25 none
+   #/skgunsgive <Player> 12 8 1.5 0.1 30 0.5 none
+   #/skgunsgive <Player> 13 14 0.8 0.5 8 0.1 none
+   #/skgunsgive <Player> 14 12 1.5 0.5 25 0.25 none
+   #/skgunsgive <Player> 15 6 1 0.1 30 0.5 none
+   #/skgunsgive <Player> 16 10 7 1 1 0.8 none
+  #Shotguns
+   #/skgunsgive <Player> 21 3 0.6 1.2 5 1.5 none
+   #/skgunsgive <Player> 22 3 0.5 0.5 2 0.8 none
+   #/skgunsgive <Player> 23 3 3 0.5 8 1.5 none
+  #Snipers
+   #/skgunsgive <Player> 31 20 3 2 4 1 none
+   #/skgunsgive <Player> 32 12 0.6 1 6 1 none
+   #/skgunsgive <Player> 33 10 1.5 0.4 10 1 none
+  #SMGs
+   #/skgunsgive <Player> 41 2 1.5 0 25 1 none
+   #/skgunsgive <Player> 42 2 1.5 0 30 1 none
+   #/skgunsgive <Player> 43 2 0.5 0 18 1 none
+  #Explosives
+   #/skgunsgive <Player> 51 4 1 1 1 0.1 none
+   #/skgunsgive <Player> 52 2 1 1 5 0.25 none
+  #Machineguns
+   #/skgunsgive <Player> 61 3 5 0 100 1.5 none
+
+#GENERAL
+
+command /skgunsgivedefault <player> <number> <text>:
+	trigger:
+		if arg-2 is 1:
+			make console execute command "/skgunsgive %arg-1% 1 8 0.5 0.5 6 0.1 %arg-3%"
+		if arg-2 is 2:
+			make console execute command "/skgunsgive %arg-1% 2 5 1.5 0.3 12 0.5 %arg-3%"
+		if arg-2 is 3:
+			make console execute command "/skgunsgive %arg-1% 3 2 1.5 0.1 20 1 %arg-3%"
+		if arg-2 is 11:
+			make console execute command "/skgunsgive %arg-1% 11 10 1.5 0.3 25 0.25 %arg-3%"
+		if arg-2 is 12:
+			make console execute command "/skgunsgive %arg-1% 12 8 1.5 0.1 30 0.5 %arg-3%"
+		if arg-2 is 13:
+			make console execute command "/skgunsgive %arg-1% 13 14 0.8 0.5 8 0.1 %arg-3%"
+		if arg-2 is 14:
+			make console execute command "/skgunsgive %arg-1% 14 12 1.5 0.5 25 0.25 %arg-3%"
+		if arg-2 is 15:
+			make console execute command "/skgunsgive %arg-1% 15 6 1 0.1 30 0.5 %arg-3%"
+		if arg-2 is 16:
+			make console execute command "/skgunsgive %arg-1% 16 10 7 1 1 0.8 %arg-3%"
+		if arg-2 is 21:
+			make console execute command "/skgunsgive %arg-1% 21 3 0.6 1.2 5 1.5 %arg-3%"
+		if arg-2 is 22:
+			make console execute command "/skgunsgive %arg-1% 22 3 0.5 0.5 2 0.8 %arg-3%"
+		if arg-2 is 23:
+			make console execute command "/skgunsgive %arg-1% 23 3 3 0.5 8 1.5 %arg-3%"
+		if arg-2 is 31:
+			make console execute command "/skgunsgive %arg-1% 31 20 3 2 4 1 %arg-3%"
+		if arg-2 is 32:
+			make console execute command "/skgunsgive %arg-1% 32 12 0.6 1 6 1 %arg-3%"
+		if arg-2 is 33:
+			make console execute command "/skgunsgive %arg-1% 33 10 1.5 0.4 10 1 %arg-3%"
+		if arg-2 is 41:
+			make console execute command "/skgunsgive %arg-1% 41 2 1.5 0 25 1 %arg-3%"
+		if arg-2 is 42:
+			make console execute command "/skgunsgive %arg-1% 42 2 1.5 0 30 1 %arg-3%"
+		if arg-2 is 43:
+			make console execute command "/skgunsgive %arg-1% 43 2 0.5 0 18 1 %arg-3%"
+		if arg-2 is 51:
+			make console execute command "/skgunsgive %arg-1% 51 4 1 3 1 0.1 %arg-3%"
+		if arg-2 is 52:
+			make console execute command "/skgunsgive %arg-1% 52 2 1 1 5 0.25 %arg-3%"
+		if arg-2 is 61:
+			make console execute command "/skgunsgive %arg-1% 61 3 5 0 100 1.5 %arg-3%"
+		
+
+#1. player   2. gun id   3. damage   4. reload speed   5. fire rate   6. ammo   7. spread   8. effect
+command /skgunsgive <Player> <number> <number> <number> <number> <number> <number> <text>:
+	trigger:
+		if arg-8 is "pyro":
+			set {_effect} to "Pyro"
+		else if arg-8 is "cryo":
+			set {_effect} to "Cryo"
+		else if arg-8 is "poison":
+			set {_effect} to "Poison"
+		else if arg-8 is "corrosion":
+			set {_effect} to "Corrosion"
+		else if arg-8 is "electric":
+			set {_effect} to "Electric"
+		else:
+			set {_effect} to "None"
+		
+		set {_item} to diamond hoe with lore "damage: %arg-3%" and "reload time: %arg-4%" and "firing cooldown: %arg-5%" and "max ammo: %arg-6%" and "spread: %arg-7%" and "effect: %{_effect}%"
+		
+		set custom model data of {_item} to arg-2
+		if arg-2 is 1:
+			set name of {_item} to "Peace Keeper"
+			set {_reloadtype} to "single"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Pistol"
+		if arg-2 is 2:
+			set name of {_item} to "Beretta"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Pistol"
+		if arg-2 is 3:
+			set name of {_item} to "Hornet"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "smg"
+			set {_ammotype} to "Pistol"
+		if arg-2 is 11:
+			set name of {_item} to "AK-1000"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 12:
+			set name of {_item} to "MX-101"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 13:
+			set name of {_item} to "Ranger"
+			set {_reloadtype} to "single"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 14:
+			set name of {_item} to "AK-47"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 15:
+			set name of {_item} to "M16A4"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 16:
+			set name of {_item} to "Musket"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Rifle"
+		if arg-2 is 21:
+			set name of {_item} to "Ole Tongo"
+			set {_reloadtype} to "single"
+			set {_firetype} to "shotgun"
+			set {_ammotype} to "Shotgun"
+		if arg-2 is 22:
+			set name of {_item} to "Double Barrel"
+			set {_reloadtype} to "single"
+			set {_firetype} to "shotgun"
+			set {_ammotype} to "Shotgun"
+		if arg-2 is 23:
+			set name of {_item} to "Brass Punk"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "shotgun"
+			set {_ammotype} to "Shotgun"
+		if arg-2 is 31:
+			set name of {_item} to "Railgun"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "single"
+			set {_ammotype} to "Sniper"
+		if arg-2 is 32:
+			set name of {_item} to "Scout Rifle"
+			set {_reloadtype} to "single"
+			set {_firetype} to "single"
+			set {_ammotype} to "Sniper"
+		if arg-2 is 33:
+			set name of {_item} to "Rapid Fire Precision"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "normal"
+			set {_ammotype} to "Sniper"
+		if arg-2 is 41:
+			set name of {_item} to "UNP"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "smg"
+			set {_ammotype} to "SMG"
+		if arg-2 is 42:
+			set name of {_item} to "Torrent"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "smg"
+			set {_ammotype} to "SMG"
+		if arg-2 is 43:
+			set name of {_item} to "Pocket SMG"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "smg"
+			set {_ammotype} to "SMG"
+		if arg-2 is 51:
+			set name of {_item} to "Rocket Launcher"
+			set {_reloadtype} to "single"
+			set {_firetype} to "rocket"
+			set {_ammotype} to "Explosive"
+		if arg-2 is 52:
+			set name of {_item} to "Grenade Launcher"
+			set {_reloadtype} to "single"
+			set {_firetype} to "grenade"
+			set {_ammotype} to "Explosive"
+		if arg-2 is 61:
+			set name of {_item} to "Minigun"
+			set {_reloadtype} to "normal"
+			set {_firetype} to "lmg"
+			set {_ammotype} to "LMG"
+			
+		set {_NBT} to nbt compound of {_item}
+		
+		set tag "tag;Effect" of {_NBT} to "%{_effect}%"
+		set tag "tag;Dmg" of {_NBT} to arg-3
+		set tag "tag;Reload" of {_NBT} to arg-4
+		set tag "tag;Firerate" of {_NBT} to arg-5
+		set tag "tag;Ammo" of {_NBT} to arg-6
+		set tag "tag;MaxAmmo" of {_NBT} to arg-6
+		set tag "tag;Spread" of {_NBT} to arg-7
+		set tag "tag;ReloadType" of {_NBT} to "%{_reloadtype}%"
+		set tag "tag;AmmoType" of {_NBT} to "%{_ammotype}%"
+		set tag "tag;FireType" of {_NBT} to "%{_firetype}%"
+		
+		give nbt item of {_NBT} to arg-1
+
+command /skgunsgiveammo <player> <text> <number>:
+	trigger:
+		if arg-2 is "pistol":
+			set {_name} to "Pistol"
+			set {_id} to 1
+		else if arg-2 is "rifle":
+			set {_name} to "Rifle"
+			set {_id} to 2
+		else if arg-2 is "shotgun":
+			set {_name} to "Shotgun"
+			set {_id} to 4
+		else if arg-2 is "sniper":
+			set {_name} to "Sniper"
+			set {_id} to 3
+		else if arg-2 is "smg":
+			set {_name} to "SMG"
+			set {_id} to 5
+		else if arg-2 is "explosive":
+			set {_name} to "Explosive"
+			set {_id} to 6
+		else if arg-2 is "lmg":
+			set {_name} to "LMG"
+			set {_id} to 7
+		else:
+			send "Not a valid ammo type" to the player
+			stop
+		give arg-3 of iron nuggets named "%{_name}% Ammo" with custom model data {_id} to arg-1
+		
+command /skgunsgivearguments:
+	trigger:
+		send "/skgunsgive <player> <gun id> <damage> <reload speed> <fire rate> <ammo> <spread> <effect>" to the player
+
+command /skgunsgiveammoarguments:
+	trigger:
+		send "/skgunsgivedefault <player> <ammo type> <amount>" to the player
+
+command /skgunsgivedefaultarguments:
+	trigger:
+		send "/skgunsgivedefault <player> <gun id> <effect>" to the player
+
+command /skgunsgivelistgunids:
+	trigger:
+		send "1 = Peace Keeper | 2 = Beretta | 3 = Hornet | 11 = AK-1000 | 12 = MX-101 | 13 = Ranger | 14 = AK-47 | 15 = M16A4 | 16 = Musket | 21 = Ole Tongo | 22 = Double Barrel | 23 = Brass Punk | 31 = Railgun | 32 = Scout Rifle | 33 = Rapid Fire Precision | 41 = UNP | 42 = Torrent | 43 = Pocket SMG | 51 = Rocket Launcher | 52 = Grenade Launcher" to the player
+
+command /skgunsgivelisteffects:
+	trigger:
+		send "Pyro | Cryo | Poison | Corrosion | Electric" to the player
+
+
+
+
+on damage:
+	if projectile exists:
+		if metadata "Damage" of projectile is set:
+			cancel event
+			set {_dmg} to metadata value "Damage" of projectile / 2
+			set {_health} to health of victim
+			make attacker damage the victim by 0
+			
+			set {_armor} to victim's generic armor final attribute 
+			set {_toughness} to victim's generic armor final attribute 
+
+			set {_newdmg} to {_dmg} * (1 - ((min(20, max({_armor} / 5, {_armor} - (({_dmg} * 4)/({_toughness} + 8))))) / 25))
+
+			if {_newdmg} is more than {_health}:
+				set health of victim to 0
+			else:
+				set the victim's health to {_health} - {_newdmg}
+			loop 20 times:
+				play nether wart block break 1 block above the victim
+			#make the shooter damage the victim by "%{_dmg}%" parsed as an integer
+		wait 1 tick
+		if victim is alive:
+			if metadata value "Effect" of projectile is "Pyro":
+				ignite the victim
+			if metadata value "Effect" of projectile is "Cryo":
+				apply slowness 3 to the victim for 10 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Poison":
+				apply poison 3 to the victim for 10 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Corrosion":
+				apply wither 2 to the victim for 5 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Electric":
+				loop all entities in radius 2 around the victim:
+					make attacker damage the loop-entity by 2
+					apply slowness 10 to the loop-entity for 2 seconds replacing the existing effect
+				apply slowness 10 to the victim for 3 seconds replacing the existing effect
+
+
+
+
+
+on join:
+	while 1 is 1:
+		if {skgun.%player%.scoped} is true:
+			set {_slot} to player's current hotbar slot id
+			while {skgun.%player%.scoped} is true:
+				set current hotbar slot of player to slot {_slot} of the player
+				apply slowness 4 to the player for 5 ticks replacing the existing effect
+				wait 1 tick
+		if {skguns.%player%.reloading} is true:
+			set {_slot} to player's current hotbar slot id
+			while {skguns.%player%.reloading} is true:
+				set current hotbar slot of player to slot {_slot} of the player
+				wait 1 tick
+		wait 1 tick
+		
+on join:
+	while 1 is 1:
+		set {_NBT} to nbt compound of player's held item
+		set {_Type} to tag "tag;FireType" of {_NBT}
+		if {_Type} is "lmg":
+			apply slowness to the player for 1 second replacing the existing effect
+		wait 1 second
+
+
+
+command /reset:
+	trigger:
+		set {skguns.%player%.reloading} to false
+	
+		
+
+
+
+
+
+on inventory click:
+	if {skguns.%player%.reloading} is true:
+		cancel event
+	if {skgun.%player%.scoped} is true:
+		cancel event
+
+
+
+
+
+on projectile shoot:
+	wait 1 tick
+	if metadata "arrow" of projectile is "Bullet":
+		while projectile is alive:
+			play electric spark at the projectile
+			wait 1 tick
+
+
+
+
+
+on projectile hit:
+	if metadata value "arrow" of projectile is "Bullet":
+		wait 1 tick
+		loop 4 times:
+			play stone block break at the projectile
+		play critical hit at the projectile
+		kill the projectile
+		
+	if metadata value "arrow" of projectile is "Rocket":
+		set {_damage} to metadata "Damage" of projectile
+		set {_radius} to {_damage} / 4
+		#play large explosion at the projectile
+		
+		safe explosion with power {_damage} at the projectile
+		
+		wait 1 tick
+		
+		loop all entities in radius 5 of projectile:
+		#	set {_health} to health of loop-entity
+		#	set health of loop-entity to {_health} - {_damage}
+			
+		#	make shooter damage the loop-entity by 0
+			push loop-entity (direction from projectile to loop-entity) at speed {_damage} / 4
+			if loop-entity is alive:
+				if metadata value "Effect" of projectile is "Pyro":
+					ignite the loop-entity
+				if metadata value "Effect" of projectile is "Cryo":
+					apply slowness 3 to the loop-entity for 10 seconds replacing the existing effect
+				if metadata value "Effect" of projectile is "Poison":
+					apply poison 3 to the loop-entity for 10 seconds replacing the existing effect
+				if metadata value "Effect" of projectile is "Corrosion":
+					apply wither 2 to the loop-entity for 5 seconds replacing the existing effect
+		kill the projectile
+
+
+
+
+
+on drop:
+	if {skguns.%player%.reloading} is true:
+		cancel event
+	if {skgun.%player%.scoped} is true:
+		cancel event
+
+
+
+
+
+#============================================================================
+#shooting
+
+
+
+on right click with diamond hoe:
+	if custom model data of player's held item is 0:
+		stop
+	set {_NBT} to nbt compound of player's held item
+	set {_Type} to tag "tag;FireType" of {_NBT}
+	if {_Type} is not set:
+		stop
+		
+	set {_Dmg} to tag "tag;Dmg" of {_NBT}
+	set {_Firerate} to tag "tag;Firerate" of {_NBT}
+	set {_Ammo} to tag "tag;Ammo" of {_NBT}
+	set {_Effect} to tag "tag;Effect" of {_NBT}
+	set {_slot} to player's current hotbar slot id
+	set {_spread} to tag "tag;Spread" of {_NBT}
+	
+	if {_Dmg} is not set:
+		stop
+	if {_Firerate} is not set:
+		stop
+	if {_Ammo} is not set:
+		stop
+	if {_Effect} is not set:
+		stop
+	if {_spread} is not set:
+		stop
+		
+	#-------------------------------------------------
+	
+	#LMG
+	if {_Type} is "lmg":
+		#conditions
+		if {skguns.%player%.reloading} is true:
+			stop
+		cancel event
+		
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+			
+		set {skguns.%player%.lastshot} to now
+		
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player
+			stop
+		
+		if block at the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+				
+		loop 2 times:
+			#firing effects
+			play sound "entity.firework_rocket.blast" with volume 20 and pitch 0.5 at the player
+			
+			set {_loc1} to location 1.5 blocks above the player
+			set {_loc2} to location 1.5 blocks in front of {_loc1}
+			play cloud at {_loc2}
+			play electric spark at {_loc2}
+		
+			
+			#bullet
+			make the player shoot an arrow at speed 20
+			set {_arrow} to last shot projectile
+			set metadata value "arrow" of {_arrow} to "Bullet"
+			set metadata value "Damage" of {_arrow} to {_Dmg}
+			set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+			push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+			set {_loc} to location 1 block to the right of the player
+			push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+			play sound "block.stone_button.click_on" with volume 0.25 at the player
+			
+			#updating Ammo
+			remove 1 from {_Ammo}
+			set tag "tag;Ammo" of {_NBT} to {_Ammo}
+			set current hotbar slot of player to slot {_slot} of the player
+			set player's held item to nbt item of {_NBT}
+			send action bar "%{_Ammo}%" to the player
+			wait 2 tick
+	
+	#-------------------------------------------------
+	#SMG
+	if {_Type} is "smg":
+		#conditions
+		if {skguns.%player%.reloading} is true:
+			stop
+		cancel event
+		
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+			
+		set {skguns.%player%.lastshot} to now
+		
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player
+			stop
+		
+		if block at the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+				
+		loop 2 times:
+			#firing effects
+			play sound "entity.firework_rocket.blast" with volume 20 and pitch 1.5 at the player
+			
+			set {_loc1} to location 1.5 blocks above the player
+			set {_loc2} to location 1.5 blocks in front of {_loc1}
+			play cloud at {_loc2}
+			play electric spark at {_loc2}
+		
+			
+			#bullet
+			make the player shoot an arrow at speed 20
+			set {_arrow} to last shot projectile
+			set metadata value "arrow" of {_arrow} to "Bullet"
+			set metadata value "Damage" of {_arrow} to {_Dmg}
+			set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+			push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+			set {_loc} to location 1 block to the right of the player
+			push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+			play sound "block.stone_button.click_on" with volume 0.25 at the player
+			
+			#updating Ammo
+			remove 1 from {_Ammo}
+			set tag "tag;Ammo" of {_NBT} to {_Ammo}
+			set current hotbar slot of player to slot {_slot} of the player
+			set player's held item to nbt item of {_NBT}
+			send action bar "%{_Ammo}%" to the player
+			wait 2 tick
+	
+	#-------------------------------------------------
+	#Shotgun
+	else if {_Type} is "shotgun":
+		#conditions
+		if {skguns.%player%.reloading} is true:
+			if tag "tag;ReloadType" of {_NBT} is "Single":
+				set {skguns.%player%.reloading} to false
+		cancel event
+		
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+			
+		set {skguns.%player%.lastshot} to now
+		
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player for all players
+			stop
+		
+		#firing effects
+		play sound "entity.firework_rocket.twinkle" with volume 20 and pitch 1.5 at the player
+		play sound "entity.generic.explode" with volume 20 and pitch 1.5 at the player
+		
+		if block at the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+			
+		loop 10 times:
+			set {_loc1} to location 1.5 blocks above the player
+			set {_loc2} to location 1.5 blocks in front of {_loc1}
+			play cloud at {_loc2}
+			play electric spark at {_loc2}
+			
+			#bullet
+			make the player shoot an arrow at speed 10
+			set {_arrow} to last shot projectile
+			set metadata value "arrow" of {_arrow} to "Bullet"
+			set metadata value "Damage" of {_arrow} to {_Dmg}
+			set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+			push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+			set {_loc} to location 1 block to the right of the player
+			push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+			play sound "block.stone_button.click_on" with volume 0.25 at the player 
+		
+		#updating Ammo
+		remove 1 from {_Ammo}
+		set tag "tag;Ammo" of {_NBT} to {_Ammo}
+		set current hotbar slot of player to slot {_slot} of the player
+		set player's held item to nbt item of {_NBT}
+		send action bar "%{_Ammo}%" to the player
+		
+		if custom model data of player's held item is 21:
+			wait 5 ticks
+			play sound "loadslidein" at the player for all players
+			wait 5 ticks
+			play sound "loadslideout" at the player for all players
+	
+	#-------------------------------------------------
+	#Grenade
+	else if {_Type} is "grenade":
+		#conditions
+		
+		if {skguns.%player%.reloading} is true:
+			if tag "tag;ReloadType" of {_NBT} is "Single":
+				set {skguns.%player%.reloading} to false
+			else:
+				stop
+		cancel event
+			
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+				
+		set {skguns.%player%.lastshot} to now
+			
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player 
+			stop
+			
+		#firing effects
+		play sound "entity.generic.explode" with volume 20 and pitch 2 at the player
+		
+		set {_loc1} to location 1.5 blocks above the player
+		set {_loc2} to location 1.5 blocks in front of {_loc1}
+		play cloud at {_loc2}
+		play electric spark at {_loc2}
+			
+		if block 1 block above the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+			
+		#bullet
+		make the player shoot a snowball at speed 2
+		set {_arrow} to last shot projectile
+		set metadata value "arrow" of {_arrow} to "Rocket"
+		set metadata value "Damage" of {_arrow} to {_Dmg}
+		set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+		push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+		set {_loc} to location 1 block to the right of the player
+		push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+			
+		#updating Ammo
+		remove 1 from {_Ammo}
+		set tag "tag;Ammo" of {_NBT} to {_Ammo}
+		set current hotbar slot of player to slot {_slot} of the player
+		set player's held item to nbt item of {_NBT}
+		send action bar "%{_Ammo}%" to the player
+	
+	#-------------------------------------------------
+	#Rocket
+	else if {_Type} is "rocket":
+		#conditions
+		
+		if {skguns.%player%.reloading} is true:
+			if tag "tag;ReloadType" of {_NBT} is "Single":
+				set {skguns.%player%.reloading} to false
+			else:
+				stop
+		cancel event
+			
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+				
+		set {skguns.%player%.lastshot} to now
+			
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player 
+			stop
+			
+		#firing effects
+		play sound "entity.generic.explode" with volume 20 and pitch 2 at the player
+		play sound "entity.wither.shoot" with volume 20 and pitch 1 at the player
+		
+		set {_loc1} to location 1.5 blocks above the player
+		set {_loc2} to location 1.5 blocks in front of {_loc1}
+		play cloud at {_loc2}
+		play electric spark at {_loc2}
+			
+		if block 1 block above the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+			
+		#bullet
+		make the player shoot a snowball at speed 4
+		set {_arrow} to last shot projectile
+		set metadata value "arrow" of {_arrow} to "Rocket"
+		set metadata value "Damage" of {_arrow} to {_Dmg}
+		set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+		push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+		set {_loc} to location 1 block to the right of the player
+		push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+			
+		#updating Ammo
+		remove 1 from {_Ammo}
+		set tag "tag;Ammo" of {_NBT} to {_Ammo}
+		set current hotbar slot of player to slot {_slot} of the player
+		set player's held item to nbt item of {_NBT}
+		send action bar "%{_Ammo}%" to the player
+			
+	#-------------------------------------------------
+	#NORMAL
+	else:
+		if {skgun.%player%.scoped} is true:
+			set {_spread} to {_spread} / 10
+		
+		#conditions
+		
+		if {skguns.%player%.reloading} is true:
+			if tag "tag;ReloadType" of {_NBT} is "Single":
+				set {skguns.%player%.reloading} to false
+			else:
+				stop
+		cancel event
+			
+		set {_waited} to difference between {skguns.%player%.lastshot} and now
+		if {_waited} is less than "%{_Firerate}% seconds" parsed as a timespan:
+			stop
+				
+		set {skguns.%player%.lastshot} to now
+			
+		if {_Ammo} is less than 1:
+			play sound "block.stone_button.click_on" with volume 0.5 at the player 
+			stop
+			
+		#firing effects
+		play sound "entity.firework_rocket.blast" with volume 20 and pitch 1 at the player 
+
+		#railgun sfx
+		if custom model data of player's held item is 31:
+			play sound "entity.generic.explode" with volume 20 and pitch 1.5 at the player 
+		else if {skgun.%player%.scoped}:
+			if {skgun.%player%.scopedweaponID} is 31:
+				play sound "entity.generic.explode" with volume 20 and pitch 1 at the player 
+		
+		set {_loc1} to location 1.5 blocks above the player
+		set {_loc2} to location 1.5 blocks in front of {_loc1}
+		play cloud at {_loc2}
+		play electric spark at {_loc2}
+			
+		if block 1 block above the player is air:
+			set {_loc} to location 1 blocks above the player
+			set block at {_loc} to light
+			wait 2 ticks
+			set block at {_loc} to air
+			
+		#bullet
+		make the player shoot an arrow at speed 20
+		set {_arrow} to last shot projectile
+		set metadata value "arrow" of {_arrow} to "Bullet"
+		set metadata value "Damage" of {_arrow} to {_Dmg}
+		set metadata value "Effect" of {_arrow} to "%{_Effect}%"
+		push {_arrow} upwards at speed (random number between {_spread} and {_spread} * -1)
+		set {_loc} to location 1 block to the right of the player
+		push {_arrow} (direction from player to {_loc}) at speed (random number between {_spread} and {_spread} * -1)
+		play sound "block.stone_button.click_on" with volume 0.25 at the player 
+			
+		#updating Ammo
+		remove 1 from {_Ammo}
+		set tag "tag;Ammo" of {_NBT} to {_Ammo}
+		set current hotbar slot of player to slot {_slot} of the player
+		set player's held item to nbt item of {_NBT}
+		send action bar "%{_Ammo}%" to the player
+		
+		if tag "tag;FireType" of {_NBT} is "single":
+			set {_waittime} to {_Firerate} / 2
+			wait "%{_waittime}% seconds" parsed as a timespan
+			play sound "loadclick" with volume 2 and pitch 1 at the player 
+
+
+
+
+
+#==========================================================================
+#Reloading
+
+
+
+on swap item:
+	if custom model data of player's held item is 0:
+		stop
+	if player is holding diamond hoe:
+		set {_NBT} to nbt compound of player's held item
+		set {_Type} to tag "tag;ReloadType" of {_NBT}
+		if {_Type} is not set:
+			stop
+			
+		#setting variables
+		set {_item} to player's held item
+		set {_Reload} to tag "tag;Reload" of {_NBT}
+		set {_MaxAmmo} to tag "tag;MaxAmmo" of {_NBT}
+		set {_Ammo} to tag "tag;Ammo" of {_NBT}
+		set {_AmmoType} to tag "tag;AmmoType" of {_NBT}
+		set {_slot} to player's current hotbar slot id
+		
+		if {_Reload} is not set:
+			stop
+		if {_MaxAmmo} is not set:
+			stop
+		if {_Ammo} is not set:
+			stop
+		if {_AmmoType} is not set:
+			stop
+			
+			
+		if {skguns.%player%.reloading} is true:
+			cancel event
+			stop
+		else:
+			set {skguns.%player%.reloading} to true
+		
+		#-------------------------------------------------
+		#Single
+		if {_Type} is "single":
+			cancel event
+			
+			if {skgun.%player%.scoped} is true:
+				set {skgun.%player%.scoped} to false
+				play sound "item.spyglass.stop_using" with volume 0.3 at the player 
+				set custom model data of player's held item to {skgun.%player%.scopedweaponID}
+				set {_NBT} to nbt compound of player's held item
+			
+			#conditions				
+			if player's gamemode is not creative:
+				if player does not have iron nuggets named "%{_AmmoType}% Ammo":
+					set {skguns.%player%.reloading} to false
+					stop
+			
+			#reloading
+			if custom model data of player's held item is 13:
+				play sound "m1garandping" with volume 0.5 at the player 
+				wait 1 second
+			else:
+				play sound "loadslideout" at the player 
+			
+			wait 10 ticks
+			
+			while {skguns.%player%.reloading} is true:
+				if {_Ammo} is {_MaxAmmo}:
+					exit 1 loop
+				if player's gamemode is not creative:
+					if player does not have iron nuggets named "%{_AmmoType}% Ammo":
+						set {skguns.%player%.reloading} to false
+						stop
+					else:
+						remove 1 iron nugget named "%{_AmmoType}% Ammo" from the player's inventory
+			
+				play sound "loadbulletin" with pitch 1 at the player 
+				
+				set {_Ammo} to tag "tag;Ammo" of {_NBT}
+				add 1 to {_Ammo}
+				set tag "tag;Ammo" of {_NBT} to {_Ammo}
+				set current hotbar slot of player to slot {_slot} of the player
+				set player's held item to nbt item of {_NBT}
+				send action bar "%{_Ammo}%" to the player
+				
+				wait "%{_Reload}% seconds" parsed as a timespan
+			
+			wait 1 tick
+			set {skguns.%player%.reloading} to false
+			play sound "loadslidein" at the player for all players
+			
+		#------------------------------------------------------
+		#NORMAL
+		else:
+			cancel event
+			if {skgun.%player%.scoped} is true:
+				set {skgun.%player%.scoped} to false
+				play sound "item.spyglass.stop_using" with volume 0.3 at the player 
+				set custom model data of player's held item to {skgun.%player%.scopedweaponID}
+				set {_NBT} to nbt compound of player's held item
+			
+			if {_Ammo} is greater than 0:
+				if player's gamemode is not creative:
+					if {_AmmoType} is "Pistol":
+						set {_cmd} to 1
+					else if {_AmmoType} is "Rifle":
+						set {_cmd} to 2
+					else if {_AmmoType} is "Sniper":
+						set {_cmd} to 3
+					else if {_AmmoType} is "Shotgun":
+						set {_cmd} to 4
+					else if {_AmmoType} is "SMG":
+						set {_cmd} to 5
+					else if {_AmmoType} is "Explosive":
+						set {_cmd} to 6
+					else if {_AmmoType} is "LMG":
+						set {_cmd} to 7
+					give {_Ammo} of iron nuggets named "%{_AmmoType}% Ammo" with custom model data {_cmd} to the player
+				set {_Ammo} to 0
+				
+			if player's gamemode is not creative:
+				if player has {_MaxAmmo} of iron nuggets named "%{_AmmoType}% Ammo":
+					remove {_MaxAmmo} of iron nuggets named "%{_AmmoType}% Ammo" from player's inventory
+				else if player has iron nuggets named "%{_AmmoType}% Ammo":
+					set {_lastammo} to number of iron nuggets named "%{_AmmoType}% Ammo" in player's inventory
+					remove all iron nuggets named "%{_AmmoType}% Ammo" from the player's inventory
+				else:
+					set {skguns.%player%.reloading} to false
+					stop
+					
+			if {_AmmoType} is "Pistol":
+				set {_pitch} to 1.2
+			if {_AmmoType} is "SMG":
+				set {_pitch} to 1.2
+			if {_AmmoType} is "Rifle":
+				set {_pitch} to 0.9
+			if {_AmmoType} is "Shotgun":
+				set {_pitch} to 0.8
+			if {_AmmoType} is "Sniper":
+				set {_pitch} to 0.8
+			if {_AmmoType} is "Explosive":
+				set {_pitch} to 0.8
+			if {_AmmoType} is "LMG":
+				set {_pitch} to 0.8
+			
+			
+			play sound "loadmagout" with volume 1 and pitch {_pitch} at the player 
+			wait "%{_Reload}% seconds" parsed as a timespan
+			play sound "loadmagin" with volume 1 and pitch {_pitch} at the player 
+			
+			wait 15 ticks
+			
+			if {_lastammo} is set:
+				add {_lastammo} to {_Ammo}
+			else:
+				set {_Ammo} to {_MaxAmmo}
+			
+			#updating Ammo
+			set tag "tag;Ammo" of {_NBT} to {_Ammo}
+			set current hotbar slot of player to slot {_slot} of the player
+			set player's held item to nbt item of {_NBT}
+			send action bar "%{_Ammo}%" to the player
+			wait 1 tick
+			set {skguns.%player%.reloading} to false
+			
+			play sound "loadclick" with volume 2 at the player 
+
+#==============================================================================
+#SCOPING
+
+on left click with diamond hoe:
+	set {_NBT} to nbt compound of player's held item
+	set {_Type} to tag "tag;AmmoType" of {_NBT}
+	if {_Type} is "Sniper":
+		if {skguns.%player%.reloading} is true:
+			stop
+		cancel event
+		if {skgun.%player%.scoped} is not set:
+			set {skgun.%player%.scoped} to true
+			play sound "item.spyglass.use" with volume 0.3 at the player
+			set {skgun.%player%.scopedweaponID} to custom model data of player's held item
+			set custom model data of player's held item to 100
+			stop
+		if {skgun.%player%.scoped} is false:
+			set {skgun.%player%.scoped} to true
+			play sound "item.spyglass.use" with volume 0.3 at the player
+			set {skgun.%player%.scopedweaponID} to custom model data of player's held item
+			set custom model data of player's held item to 100
+			stop
+		if {skgun.%player%.scoped} is true:
+			set {skgun.%player%.scoped} to false
+			play sound "item.spyglass.stop_using" with volume 0.3 at the player 
+			set custom model data of player's held item to {skgun.%player%.scopedweaponID}
+			stop
