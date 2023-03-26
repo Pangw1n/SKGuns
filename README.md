@@ -181,7 +181,7 @@ Double Barrel
 Brass Punk
 
 
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/shotguns.png?raw=true" alt="Shotguns.png">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Shotguns.png?raw=true" alt="Shotguns.png">
 
 
 <strong>Snipers:</strong>
@@ -193,7 +193,7 @@ Scout Rifle
 Rapid Fire Precision
 
 
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/snipers.png?raw=true" alt="Snipers.png">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Snipers.png?raw=true" alt="Snipers.png">
 
 
 <strong>SMGs:</strong>
