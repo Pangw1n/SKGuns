@@ -144,174 +144,97 @@ easond/SKGuns/blob/mai
 ## List Of Guns
 
 ### Pistols
-
-Peace Keeper
-
-Beretta
-
-Hornet
+- Peace Keeper
+- Beretta
+- Hornet
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png">
 
 <strong>Rifles:</strong>
-
-AK-1000
-
-MX-101
-
-Ranger
-
-AK-47
-
-M16
+- AK-1000
+- MX-101
+- Ranger
+- AK-47
+- M16
 
 Musket
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png">
 
 Shotguns:</strong>
-
-Ole Tongo
-
-Double Barrel
-
-Brass Punk
-
+- Ole Tongo
+- Double Barrel
+- Brass Punk
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Shotguns.png?raw=true" alt="Shotguns.png">
 
 
 <strong>Snipers:</strong>
-
-Railgun
-
-Scout Rifle
-
-Rapid Fire Precision
-
+- Railgun
+- Scout Rifle
+- Rapid Fire Precision
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Snipers.png?raw=true" alt="Snipers.png">
 
 
 <strong>SMGs:</strong>
-
-UNP
-
-Torrent
-
-Pocket SMG
+- UNP
+- Torrent
+- Pocket SMG
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png">
 
 <strong>Launchers:</strong>
-
-Rocket Launcher
-
-Grenade Launcher
+- Rocket Launcher
+- Grenade Launcher
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png">
 
 <strong>Machine Guns:</strong>
-
-Minigun
+- Minigun
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png">
 
+<hr/>
 
+## Future Plans
+- Adding Modern &amp; Past Weapons
+- Tutorial on making custom weapons
+- Grenades?
+- Artillery?
 
-
-
-
-
-
-
-<span style="text-decoration: underline"><strong>Future Plans:</strong></span>
-
--Adding Modern &amp; Past Weapons
-
--Tutorial on making custom weapons
-
--Grenades?
-
--Artillery?
-
-
-
-
-
-
-
-
-
-
-
-<span style="text-decoration: underline"><strong>Change Log:</strong></span>
+## Change Log
 
 <strong>Ver 1.1.3:</strong>
-
 - Armor now mitigates damage received from damage dealt by guns
-
 - bug fixes
 
-
-
-<div>
-
-<div><strong>Ver 1.1.2:</strong>
-
+<strong>Ver 1.1.2:</strong>
 - added new kind of weapon &amp; ammo: Machine Guns
-
 - added Minigun
-
 - bug fixes
-
-
 
 <strong>Ver 1.1.1:</strong>
-
 - added AK-47
-
 - added M16
-
 - added Musket
-
 - fixed an issue with the plugin destroying the offhand item
-
 - updated reloading sounds
 
-
-
 <strong>Ver 1.1.0:</strong>
-
 - Fixed a Texture in the Resource pack
-
 - Added a new kind of weapon: Launchers
-
 - Added a new kind of ammo: Explosive ammo
-
 - Added Rocket Launcher
-
 - Added Grenade Launcher
-
 - Fixed a bug with scoping
 
-
-
 <strong>Ver 1.0.2:</strong>
-
 - Changed some features with scoping
 
-
-
 <strong>Ver 1.0.1:</strong>
-
 - Fixed a bug with Electric guns creating invincible entities
 
-
-
 <strong>Ver 1.0:</strong>
-
--Release
-
--Futuristic weapons</div>
-</div>
+- Release
+- Futuristic weapons
