@@ -1,18 +1,11 @@
 # SKGuns
 
-Skript-bassed guns plugin for minecraft
-
-<hr/>
-
-<dl class="customResourceFieldnative_mc_version">
-</dt>
-<dd>1.17</dd>
-</dl>
-
 <dl class="customResourceFieldmc_versions">
 <dt>Tested Minecraft Versions:</dt>
 <dd>
-    <ul class="plainList"><li>1.17</li><li>1.18</li></ul>
+    <ul class="plainList">
+        <li>1.19.3</li>
+    </ul>
 </dd>
 </dl>
 
@@ -40,7 +33,7 @@ Skript-bassed guns plugin for minecraft
 
 -Download this plugin file
 
--Locate "plugins/Skript/scripts" in the server files and put the .sk file from the plugin file into that folder
+-Locate "plugins/" in the server files and put the files from the plugin zip file into that folder
 
 -Install Resource Pack from the plugin file (Optional but recommended)
 
