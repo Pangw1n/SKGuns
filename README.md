@@ -146,6 +146,7 @@ F (Swap Item Hand) to reload
 - It is now possible to create new weapons through yaml files (/Server/plugins/SKguns/weapons)
 - Each weapon now has its own sound effect
 - You can use the function createSkGunItem() to generate the item in your script to do things like create a recipe for the weapon
+- Commands now have a permissions system.
 
 ### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
