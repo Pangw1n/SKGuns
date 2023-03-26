@@ -25,7 +25,19 @@
 
 -REQUIRES <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/">SkQuery </a>(Required for certain features)
 
+## Permissions
 
+    skguns.skgunsgive
+Command access to /skgunsgive
+
+    skguns.skgunsgiveammo
+Command access to /skgunsgiveammo
+
+    skguns.resetgun
+Command access to /resetgun
+
+    skguns.*
+Access to all features
 
 ## Installation
 
