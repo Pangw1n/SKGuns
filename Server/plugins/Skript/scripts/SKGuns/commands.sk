@@ -36,16 +36,6 @@ command /skgunsgiveammo <player> <text> <number>:
 			stop
 		give arg-3 of iron nuggets named "%{_name}% Ammo" with custom model data {_id} to arg-1
 
-command /skgunsgivelistgunids:
-	permission: skguns.skgunsgivelistgunids, skguns.*
-	trigger:
-		send "&7[&bSKguns&7] &8» &f1 = Peace Keeper | 2 = Beretta | 3 = Hornet | 11 = AK-1000 | 12 = MX-101 | 13 = Ranger | 14 = AK-47 | 15 = M16A4 | 16 = Musket | 21 = Ole Tongo | 22 = Double Barrel | 23 = Brass Punk | 31 = Railgun | 32 = Scout Rifle | 33 = Rapid Fire Precision | 41 = UNP | 42 = Torrent | 43 = Pocket SMG | 51 = Rocket Launcher | 52 = Grenade Launcher" to the player
-
-command /skgunsgivelisteffects:
-	permission: skguns.skgunsgivelisteffects, skguns.*
-	trigger:
-		send "&7[&bSKguns&7] &8» &fPyro | Cryo | Poison | Corrosion | Electric" to the player
-
 command /resetgun:
 	permission: skguns.resetgun, skguns.*
 	trigger:

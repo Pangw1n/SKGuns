@@ -5,7 +5,11 @@ Place your custom weapons file in this folder.
 Weapon Name
 
 ## Effect
-Weapon Effects
+    Pyro
+    Cryo
+    Poison
+    Corrosion
+    Electric
 
 ## Reload Type
     normal
@@ -30,7 +34,7 @@ Weapon Effects
     LMG
 
 ## Fire Sound
-If you created a weapon with a custom sound, you must enter the sound value here.
+If you created a weapon with a custom sound, you must enter the sound value here
 
 ## Damage
 amount of damage a single shot does in half hearts or the power of the explosion if it is an explosive weapon
