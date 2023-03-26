@@ -20,7 +20,7 @@ Skript-bassed guns plugin for minecraft
 <span style="text-decoration: underline">
 ADVANCED GUNS PLUGIN MADE WITH SKRIPT
 </br>
-<img src="https://www.spigotmc.org/attachments/skgunsicon-png.721079/" alt="SKGunsIcon.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SKGunsIcon.png?raw=true" alt="SKGunsIcon.png" class="bbCodeImage LbImage" style="">
 
 Dependencies:
 </span></strong>
@@ -60,14 +60,9 @@ Dependencies:
 </br>
 
 <strong>
+<span style="text-decoration: underline">Commands:</span>
 
-<span style="text-decoration: underline">Commands:
-
-</br>
-</span>
-
-
-</br>
+</br></br>
 
 /skgunsgive</strong> &lt;player&gt; &lt;gun id&gt; &lt;damage&gt; &lt;reload speed&gt; &lt;fire rate&gt; &lt;ammo&gt; &lt;spread&gt; &lt;effect&gt;
 
