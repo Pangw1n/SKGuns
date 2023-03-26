@@ -1,0 +1,53 @@
+import:
+	de.tr7zw.nbtapi.NBTItem
+
+function createSkGunItem(player: player, id: number) :: item:
+
+	if file "plugins/SKguns/weapons/%{_id}%.yml" doesn't exist:
+		{_player}.sendMessage("&7[&bSKguns&7] &8» &cUnable to generate a weapon in this script. This ID does not exist.")
+	else:
+
+		load "plugins/SKguns/weapons/%{_id}%.yml" as "skGun-weapon-%{_id}%"
+
+		set {_effect} to yaml value "effect" from "skGun-weapon-%{_id}%"
+		
+		set {_reloadtype} to yaml value "reload_type" from "skGun-weapon-%{_id}%"
+		set {_ammotype} to yaml value "ammo_type" from "skGun-weapon-%{_id}%"
+		set {_firetype} to yaml value "fire_type" from "skGun-weapon-%{_id}%"
+		
+		set {_name} to yaml value "name" from "skGun-weapon-%{_id}%"
+
+		set {_damage} to yaml value "damage" from "skGun-weapon-%{_id}%"
+		set {_reload} to yaml value "reload_speed" from "skGun-weapon-%{_id}%"
+		set {_firerate} to yaml value "fire_rate" from "skGun-weapon-%{_id}%"
+		set {_fire_sound} to yaml value "fire_sound" from "skGun-weapon-%{_id}%"
+		set {_maxammo} to yaml value "ammo" from "skGun-weapon-%{_id}%"
+		set {_spread} to yaml value "spread" from "skGun-weapon-%{_id}%"
+
+		unload yaml "skGun-weapon-%{_id}%"
+	
+		set {_item} to diamond hoe with lore "damage: %{_damage}%" and "reload time: %{_reload}%" and "firing cooldown: %{_firerate}%" and "max ammo: %{_maxammo}%" and "spread: %{_spread}%" and "effect: %{_effect}%"
+		
+		set custom model data of {_item} to {_id}
+		set name of {_item} to {_name}
+
+		set {_NBT} to new NBTItem({_item})
+
+		{_NBT}.setString("Effect", "%{_effect}%")
+		{_NBT}.setInteger("Dmg", {_damage})
+
+		{_NBT}.setInteger("Reload", {_reload})
+		{_NBT}.setInteger("Firerate", {_firerate})
+		{_NBT}.setInteger("Spread", {_spread})
+		
+		{_NBT}.setString("ReloadType", "%{_reloadtype}%")
+		{_NBT}.setString("AmmoType", "%{_ammotype}%")
+		{_NBT}.setString("FireType", "%{_firetype}%")
+
+		{_NBT}.setString("FireSound", "%{_fire_sound}%")
+		
+		{_NBT}.setInteger("MaxAmmo", {_maxammo})
+		{_NBT}.setInteger("Ammo", 0)
+
+		set {_item} to {_NBT}.getItem()
+		return {_item}

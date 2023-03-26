@@ -1,0 +1,35 @@
+on damage:
+	if projectile exists:
+		if metadata "Damage" of projectile is set:
+			cancel event
+			set {_dmg} to metadata value "Damage" of projectile / 2
+			set {_health} to health of victim
+			make attacker damage the victim by 0
+			
+			set {_armor} to victim's generic armor final attribute 
+			set {_toughness} to victim's generic armor final attribute 
+
+			set {_newdmg} to {_dmg} * (1 - ((min(20, max({_armor} / 5, {_armor} - (({_dmg} * 4)/({_toughness} + 8))))) / 25))
+
+			if {_newdmg} is more than {_health}:
+				set health of victim to 0
+			else:
+				set the victim's health to {_health} - {_newdmg}
+			loop 20 times:
+				play nether wart block break 1 block above the victim
+			#make the shooter damage the victim by "%{_dmg}%" parsed as an integer
+		wait 1 tick
+		if victim is alive:
+			if metadata value "Effect" of projectile is "Pyro":
+				ignite the victim
+			if metadata value "Effect" of projectile is "Cryo":
+				apply slowness 3 to the victim for 10 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Poison":
+				apply poison 3 to the victim for 10 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Corrosion":
+				apply wither 2 to the victim for 5 seconds replacing the existing effect
+			if metadata value "Effect" of projectile is "Electric":
+				loop all entities in radius 2 around the victim:
+					make attacker damage the loop-entity by 2
+					apply slowness 10 to the loop-entity for 2 seconds replacing the existing effect
+				apply slowness 10 to the victim for 3 seconds replacing the existing effect

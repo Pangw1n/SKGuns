@@ -1,0 +1,62 @@
+command /skgunsgive <player> <number>:
+	permission: skguns.skgunsgive, skguns.*
+	trigger:
+
+		set {_item} to createSkGunItem(arg-1, arg-2)
+		{_item} is set:
+			give {_item} to arg-1
+
+
+command /skgunsgiveammo <player> <text> <number>:
+	permission: skguns.skgunsgiveammo, skguns.*
+	trigger:
+		if arg-2 is "pistol":
+			set {_name} to "Pistol"
+			set {_id} to 1
+		else if arg-2 is "rifle":
+			set {_name} to "Rifle"
+			set {_id} to 2
+		else if arg-2 is "shotgun":
+			set {_name} to "Shotgun"
+			set {_id} to 4
+		else if arg-2 is "sniper":
+			set {_name} to "Sniper"
+			set {_id} to 3
+		else if arg-2 is "smg":
+			set {_name} to "SMG"
+			set {_id} to 5
+		else if arg-2 is "explosive":
+			set {_name} to "Explosive"
+			set {_id} to 6
+		else if arg-2 is "lmg":
+			set {_name} to "LMG"
+			set {_id} to 7
+		else:
+			send "Not a valid ammo type" to the player
+			stop
+		give arg-3 of iron nuggets named "%{_name}% Ammo" with custom model data {_id} to arg-1
+		
+command /skgunsgiveammoarguments:
+	permission: skguns.skgunsgivedefault, skguns.*
+	trigger:
+		send "&7[&bSKguns&7] &8» &f/skgunsgivedefault <player> <ammo type> <amount>" to the player
+
+command /skgunsgivedefaultarguments:
+	permission: skguns.skgunsgivedefaultarguments, skguns.*
+	trigger:
+		send "&7[&bSKguns&7] &8» &f/skgunsgivedefault <player> <gun id>" to the player
+
+command /skgunsgivelistgunids:
+	permission: skguns.skgunsgivelistgunids, skguns.*
+	trigger:
+		send "&7[&bSKguns&7] &8» &f1 = Peace Keeper | 2 = Beretta | 3 = Hornet | 11 = AK-1000 | 12 = MX-101 | 13 = Ranger | 14 = AK-47 | 15 = M16A4 | 16 = Musket | 21 = Ole Tongo | 22 = Double Barrel | 23 = Brass Punk | 31 = Railgun | 32 = Scout Rifle | 33 = Rapid Fire Precision | 41 = UNP | 42 = Torrent | 43 = Pocket SMG | 51 = Rocket Launcher | 52 = Grenade Launcher" to the player
+
+command /skgunsgivelisteffects:
+	permission: skguns.skgunsgivelisteffects, skguns.*
+	trigger:
+		send "&7[&bSKguns&7] &8» &fPyro | Cryo | Poison | Corrosion | Electric" to the player
+
+command /resetgun:
+	permission: skguns.resetgun, skguns.*
+	trigger:
+		set {skguns.%player's uuid%.reloading} to false

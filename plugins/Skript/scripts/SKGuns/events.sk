@@ -1,0 +1,41 @@
+import:
+	de.tr7zw.nbtapi.NBTItem
+
+on join:
+	while 1 is 1:
+		if {skgun.%player's uuid%.scoped} is true:
+			set {_slot} to player's current hotbar slot id
+			while {skgun.%player's uuid%.scoped} is true:
+				set current hotbar slot of player to slot {_slot} of the player
+				apply slowness 4 to the player for 5 ticks replacing the existing effect
+				wait 1 tick
+		if {skguns.%player's uuid%.reloading} is true:
+			set {_slot} to player's current hotbar slot id
+			while {skguns.%player's uuid%.reloading} is true:
+				set current hotbar slot of player to slot {_slot} of the player
+				wait 1 tick
+		wait 1 tick
+		
+on join:
+	while 1 is 1:
+		player's held item is not air:
+
+			set {_NBT} to new NBTItem(player.getInventory().getItemInMainHand())
+			set {_Type} to {_NBT}.getString("FireType")
+			
+			if {_Type} is "lmg":
+				apply slowness to the player for 1 second replacing the existing effect
+		
+		wait 1 second
+
+on inventory click:
+	if {skguns.%player's uuid%.reloading} is true:
+		cancel event
+	if {skgun.%player's uuid%.scoped} is true:
+		cancel event
+
+on drop:
+	if {skguns.%player's uuid%.reloading} is true:
+		cancel event
+	if {skgun.%player's uuid%.scoped} is true:
+		cancel event
