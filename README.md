@@ -45,9 +45,6 @@
 
 -Install Resource Pack from the plugin file (Optional but recommended)
 
--run the command "/sk reload all" or restart the server
-
-
 ## Commands
     /skgunsgive <player> <gun id>
 Gives a gun
