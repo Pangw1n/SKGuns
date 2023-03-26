@@ -193,6 +193,7 @@ F (Swap Item Hand) to reload
 - SkBee dependence removed
 - The command list has been updated
 - It is now possible to create new weapons through yaml files (/Server/plugins/SKguns/weapons)
+- Each weapon now has its own sound effect
 
 ### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
