@@ -189,6 +189,8 @@ F (Swap Item Hand) to reload
 ### Ver 1.2.0
 - Tutorial on making custom weapons (Made by JasminDreasond)
 - The rocket launcher now has new effects and new sounds (Made by JasminDreasond)
+- The script has been reorganized. Now new dependencies have been added. (Made by JasminDreasond)
+- SkBee dependence removed
 
 ### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
