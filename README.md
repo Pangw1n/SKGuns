@@ -5,7 +5,7 @@ Skript-bassed guns plugin for minecraft
 <hr/>
 
 <dl class="customResourceFieldnative_mc_version">
-<dt>Native Minecraft Version:</dt>
+</dt>
 <dd>1.17</dd>
 </dl>
 
@@ -20,28 +20,28 @@ Skript-bassed guns plugin for minecraft
 <span style="text-decoration: underline">
 ADVANCED GUNS PLUGIN MADE WITH SKRIPT
 </br>
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SKGunsIcon.png?raw=true" alt="SKGunsIcon.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SKGunsIcon.png?raw=true" alt="SKGunsIcon.png">
 
 Dependencies:
 </span></strong>
 
 </br>
--REQUIRES <a href="https://github.com/SkriptLang/Skript/releases" target="_blank" class="externalLink" rel="nofollow">Skript </a>(Runs on Skript)
+-REQUIRES <a href="https://github.com/SkriptLang/Skript/releases" target="_blank">Skript </a>(Runs on Skript)
 </br>
--REQUIRES <a href="https://www.spigotmc.org/resources/skbee-skript-addon.75839/" class="internalLink">SkBee</a> (Required for guns to work)
+-REQUIRES <a href="https://www.spigotmc.org/resources/skript-reflect.82259/">SkReflect</a> (Required for guns to work)
 </br>
--REQUIRES <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/" class="internalLink">SkQuery </a>(Required for certain features)
+-REQUIRES <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/">SkQuery </a>(Required for certain features)
 
 </br>
 </br>
 <strong><span style="text-decoration: underline">Installation:</span></strong>
 
 </br>
--Install <a href="https://github.com/SkriptLang/Skript/releases" target="_blank" class="externalLink" rel="nofollow">Skript</a>
+-Install <a href="https://github.com/SkriptLang/Skript/releases" target="_blank">Skript</a>
 </br>
--Install <a href="https://www.spigotmc.org/resources/skbee-skript-addon.75839/" class="internalLink">SkBee</a>
+-Install <a href="https://www.spigotmc.org/resources/skript-reflect.82259/">SkReflect</a>
 </br>
--Install <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/" class="internalLink">SkQuery</a>
+-Install <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/">SkQuery</a>
 </br>
 -Download this plugin file
 </br>
@@ -207,10 +207,10 @@ Beretta
 </br>
 Hornet
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png">
 </div>
 </div>
 </br>
@@ -228,10 +228,10 @@ M16
 </br>
 Musket
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png">
 </div>
 </div><strong>
 </br>
@@ -243,10 +243,10 @@ Double Barrel
 </br>
 Brass Punk
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/shotguns.png?raw=true" alt="Shotguns.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/shotguns.png?raw=true" alt="Shotguns.png">
 </div>
 </div>
 </br>
@@ -258,10 +258,10 @@ Scout Rifle
 </br>
 Rapid Fire Precision
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/snipers.png?raw=true" alt="Snipers.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/snipers.png?raw=true" alt="Snipers.png">
 </div>
 </div>
 </br>
@@ -273,10 +273,10 @@ Torrent
 </br>
 Pocket SMG
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png">
 </div>
 </div>
 </br>
@@ -286,10 +286,10 @@ Rocket Launcher
 </br>
 Grenade Launcher
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png">
 </div>
 </div>
 </br>
@@ -297,10 +297,10 @@ Grenade Launcher
 </br>
 Minigun
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png" class="bbCodeImage LbImage" style="">
+<div>
+<button type="button"><span>Spoiler: <span>Image</span></span></button>
+<div>
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png">
 </div>
 </div>
 </br>
@@ -342,9 +342,9 @@ Minigun
 </br>
 
 </br>
-<div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
-<button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Past Updates</span></span></button>
-<div class="SpoilerTarget bbCodeSpoilerText"><strong>Ver 1.1.2:</strong>
+<div>
+<button type="button"><span>Spoiler: <span>Past Updates</span></span></button>
+<div><strong>Ver 1.1.2:</strong>
 </br>
 - added new kind of weapon &amp; ammo: Machine Guns
 </br>
