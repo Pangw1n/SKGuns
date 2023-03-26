@@ -19,6 +19,8 @@
 
 -REQUIRES <a href="https://www.spigotmc.org/resources/skript-reflect.82259/">SkReflect</a> (Required for guns to work)
 
+-REQUIRES <a href="https://github.com/Sashie/skript-yaml">skript-yaml</a> (Required for guns data load to work)
+
 -REQUIRES <a href="https://www.spigotmc.org/resources/nbt-api.7939/">NBT API </a>(Required for guns to work)
 
 -REQUIRES <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/">SkQuery </a>(Required for certain features)
@@ -30,6 +32,8 @@
 -Install <a href="https://github.com/SkriptLang/Skript/releases" target="_blank">Skript</a>
 
 -Install <a href="https://www.spigotmc.org/resources/skript-reflect.82259/">SkReflect</a>
+
+-Install <a href="https://github.com/Sashie/skript-yaml">skript-yaml</a>
 
 -Install <a href="https://www.spigotmc.org/resources/nbt-api.7939/">NBT API</a>
 
