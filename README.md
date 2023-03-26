@@ -186,11 +186,13 @@ F (Swap Item Hand) to reload
 
 ## Change Log
 
-### Ver 1.2.0
-- Tutorial on making custom weapons (Made by JasminDreasond)
-- The rocket launcher now has new effects and new sounds (Made by JasminDreasond)
-- The script has been reorganized. Now new dependencies have been added. (Made by JasminDreasond)
+### Ver 1.2.0 (Made by JasminDreasond)
+- Tutorial on making custom weapons
+- The rocket launcher now has new effects and new sound
+- The script has been reorganized. Now new dependencies have been added
 - SkBee dependence removed
+- The command list has been updated
+- It is now possible to create new weapons through yaml files (/Server/plugins/SKguns/weapons)
 
 ### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
