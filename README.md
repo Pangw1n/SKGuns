@@ -152,8 +152,7 @@ the amount the bullet might deviate from the crosshair
 
 </br>
 <strong>Effect:</strong>
-</br>
-Pyro | Cryo | Poison | Corrosion | Electric
+</br>easond/SKGuns/blob/mai
 </br>
 
 </br>
@@ -211,7 +210,7 @@ Hornet
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/pistols-png.721113/" alt="Pistols.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
@@ -232,7 +231,7 @@ Musket
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/rifles-png.732737/" alt="Rifles.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png" class="bbCodeImage LbImage" style="">
 </div>
 </div><strong>
 </br>
@@ -247,7 +246,7 @@ Brass Punk
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/shotguns-png.721108/" alt="Shotguns.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/shotguns.png?raw=true" alt="Shotguns.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
@@ -262,7 +261,7 @@ Rapid Fire Precision
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/snipers-png.721106/" alt="Snipers.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/snipers.png?raw=true" alt="Snipers.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
@@ -277,7 +276,7 @@ Pocket SMG
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/smgs-png.721107/" alt="SMGs.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
@@ -290,7 +289,7 @@ Grenade Launcher
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/launchers-png.729182/" alt="Launchers.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
@@ -301,7 +300,7 @@ Minigun
 <div class="ToggleTriggerAnchor bbCodeSpoilerContainer">
 <button type="button" class="button bbCodeSpoilerButton ToggleTrigger Tooltip JsOnly" data-target="> .SpoilerTarget"><span>Spoiler: <span class="SpoilerTitle">Image</span></span></button>
 <div class="SpoilerTarget bbCodeSpoilerText">
-<img src="https://www.spigotmc.org/attachments/machinegun1-png.744970/" alt="machinegun1.png" class="bbCodeImage LbImage" style="">
+<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png" class="bbCodeImage LbImage" style="">
 </div>
 </div>
 </br>
