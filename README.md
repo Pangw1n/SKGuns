@@ -92,6 +92,15 @@ Sends a list of all valid gun effects
     52 = Grenade Launcher
     61 = Minigun
 
+## Ammo Type
+    Pistol
+    Rifle
+    Shotgun
+    Sniper
+    SMG
+    Explosive
+    LMG
+
 ## Controls
 Right Click (Place / Interact) to fire gun
 
