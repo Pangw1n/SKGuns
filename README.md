@@ -101,6 +101,10 @@ Sends a list of all valid gun effects
     Explosive
     LMG
 
+## Weapon Editor
+    /Server/plugins/SKguns/weapons
+Go to this repository page
+
 ## Controls
 Right Click (Place / Interact) to fire gun
 
