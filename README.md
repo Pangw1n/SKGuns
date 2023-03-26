@@ -37,7 +37,7 @@
 
 -Download this plugin file
 
--Locate "plugins/" in the server files and put the files from the plugin zip file into that folder
+-Locate "plugins/" in the ser### Ver files and put the files from the plugin zip file into that folder
 
 -Install Resource Pack from the plugin file (Optional but recommended)
 
@@ -135,11 +135,11 @@ easond/SKGuns/blob/mai
     LMG
 
 ## Controls
-<strong>Right Click</strong> (Place / Interact) to fire gun
+Right Click (Place / Interact) to fire gun
 
-<strong>Left Click</strong> (Attack / Destroy) to scope with snipers
+Left Click (Attack / Destroy) to scope with snipers
 
-<strong>F</strong> (Swap Item Hand) to reload
+F (Swap Item Hand) to reload
 
 ## List Of Guns
 
@@ -150,47 +150,44 @@ easond/SKGuns/blob/mai
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png">
 
-<strong>Rifles:</strong>
+### Rifles
 - AK-1000
 - MX-101
 - Ranger
 - AK-47
 - M16
-
-Musket
+- Musket
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png">
 
-Shotguns:</strong>
+### Shotguns
 - Ole Tongo
 - Double Barrel
 - Brass Punk
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Shotguns.png?raw=true" alt="Shotguns.png">
 
-
-<strong>Snipers:</strong>
+### Snipers
 - Railgun
 - Scout Rifle
 - Rapid Fire Precision
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Snipers.png?raw=true" alt="Snipers.png">
 
-
-<strong>SMGs:</strong>
+### SMGs
 - UNP
 - Torrent
 - Pocket SMG
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png">
 
-<strong>Launchers:</strong>
+### Launchers
 - Rocket Launcher
 - Grenade Launcher
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png">
 
-<strong>Machine Guns:</strong>
+### Machine Guns
 - Minigun
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png">
@@ -205,23 +202,23 @@ Shotguns:</strong>
 
 ## Change Log
 
-<strong>Ver 1.1.3:</strong>
+### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
 - bug fixes
 
-<strong>Ver 1.1.2:</strong>
+### Ver 1.1.2
 - added new kind of weapon &amp; ammo: Machine Guns
 - added Minigun
 - bug fixes
 
-<strong>Ver 1.1.1:</strong>
+### Ver 1.1.1
 - added AK-47
 - added M16
 - added Musket
 - fixed an issue with the plugin destroying the offhand item
 - updated reloading sounds
 
-<strong>Ver 1.1.0:</strong>
+### Ver 1.1.0
 - Fixed a Texture in the Resource pack
 - Added a new kind of weapon: Launchers
 - Added a new kind of ammo: Explosive ammo
@@ -229,12 +226,12 @@ Shotguns:</strong>
 - Added Grenade Launcher
 - Fixed a bug with scoping
 
-<strong>Ver 1.0.2:</strong>
+### Ver 1.0.2
 - Changed some features with scoping
 
-<strong>Ver 1.0.1:</strong>
+### Ver 1.0.1
 - Fixed a bug with Electric guns creating invincible entities
 
-<strong>Ver 1.0:</strong>
+### Ver 1.0
 - Release
 - Futuristic weapons
