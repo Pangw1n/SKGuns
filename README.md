@@ -92,33 +92,6 @@ Sends a list of all valid gun effects
     52 = Grenade Launcher
     61 = Minigun
 
-### Damage
-amount of damage a single shot does in half hearts or the power of the explosion if it is an explosive weapon
-
-### Reload Speed
-amount of time in seconds it takes to reload
-
-### Fire Rate
-amount of time in seconds between shots
-
-### Ammo
-maximum ammo in a gun
-
-### Spread
-the amount the bullet might deviate from the crosshair
-
-### Effect
-easond/SKGuns/blob/mai
-
-### Ammo Type
-    Pistol
-    Rifle
-    Shotgun
-    Sniper
-    SMG
-    Explosive
-    LMG
-
 ## Controls
 Right Click (Place / Interact) to fire gun
 
