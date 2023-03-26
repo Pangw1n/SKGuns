@@ -35,16 +35,6 @@ command /skgunsgiveammo <player> <text> <number>:
 			send "Not a valid ammo type" to the player
 			stop
 		give arg-3 of iron nuggets named "%{_name}% Ammo" with custom model data {_id} to arg-1
-		
-command /skgunsgiveammoarguments:
-	permission: skguns.skgunsgivedefault, skguns.*
-	trigger:
-		send "&7[&bSKguns&7] &8» &f/skgunsgivedefault <player> <ammo type> <amount>" to the player
-
-command /skgunsgivedefaultarguments:
-	permission: skguns.skgunsgivedefaultarguments, skguns.*
-	trigger:
-		send "&7[&bSKguns&7] &8» &f/skgunsgivedefault <player> <gun id>" to the player
 
 command /skgunsgivelistgunids:
 	permission: skguns.skgunsgivelistgunids, skguns.*

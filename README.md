@@ -49,33 +49,13 @@
 
 
 ## Commands
-    /skgunsgive <player> <gun id> <damage> <reload speed> <fire rate> <ammo> <spread> <effect>
-gives a gun with custom stats
-
-<hr/>
-
-    /skgunsgivedefault <player> <gun id> <effect>
-gives a gun with default stats
+    /skgunsgive <player> <gun id>
+gives a gun
 
 <hr/>
 
     /skgunsgiveammo <player> <ammo type> <amount>
 gives ammo
-
-<hr/>
-
-    /skgunsgivearguments
-sends a list of the arguments required for /skgunsgive
-
-<hr/>
-
-    /skgunsgivedefaultarguments
-sends a list of the arguments required for /skgunsgivedefault
-
-<hr/>
-
-    /skgunsgiveammoarguments
-sends a list of the arguments required for /skgunsgiveammo
 
 <hr/>
 
