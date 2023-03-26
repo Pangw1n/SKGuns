@@ -1,0 +1,11 @@
+name: Musket
+effect: None
+reload_type: normal
+fire_type: normal
+ammo_type: Rifle
+fire_sound: item.rifle.fire
+damage: 10
+reload_speed: 7
+fire_rate: 1
+ammo: 1
+spread: 0.8

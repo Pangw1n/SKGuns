@@ -1,0 +1,11 @@
+name: Rapid Fire Precision
+effect: None
+reload_type: normal
+fire_type: normal
+ammo_type: Sniper
+fire_sound: item.rifle.silenced_fire
+damage: 10
+reload_speed: 1.5
+fire_rate: 0.4
+ammo: 10
+spread: 1

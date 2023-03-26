@@ -1,0 +1,11 @@
+name: AK-47
+effect: None
+reload_type: normal
+fire_type: normal
+ammo_type: Rifle
+fire_sound: item.assault_rifle.fire
+damage: 12
+reload_speed: 1.5
+fire_rate: 0.5
+ammo: 25
+spread: 0.25

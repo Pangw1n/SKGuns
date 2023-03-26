@@ -1,0 +1,11 @@
+name: Ole Tongo
+effect: None
+reload_type: single
+fire_type: shotgun
+ammo_type: Shotgun
+fire_sound: item.shotgun.fire
+damage: 3
+reload_speed: 0.6
+fire_rate: 1.2
+ammo: 5
+spread: 1.5

@@ -1,0 +1,11 @@
+name: Scout Rifle
+effect: None
+reload_type: single
+fire_type: single
+ammo_type: Sniper
+fire_sound: item.rifle.silenced_fire
+damage: 12
+reload_speed: 0.6
+fire_rate: 1
+ammo: 6
+spread: 1

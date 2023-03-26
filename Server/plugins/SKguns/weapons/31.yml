@@ -1,0 +1,11 @@
+name: Railgun
+effect: None
+reload_type: normal
+fire_type: single
+ammo_type: Sniper
+fire_sound: item.rifle.silenced_fire
+damage: 20
+reload_speed: 3
+fire_rate: 2
+ammo: 4
+spread: 1

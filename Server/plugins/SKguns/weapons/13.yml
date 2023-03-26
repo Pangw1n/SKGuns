@@ -1,0 +1,11 @@
+name: Ranger
+effect: None
+reload_type: single
+fire_type: normal
+ammo_type: Rifle
+fire_sound: item.heavy_rifle.fire
+damage: 14
+reload_speed: 0.8
+fire_rate: 0.5
+ammo: 8
+spread: 0.1

@@ -1,0 +1,11 @@
+name: Hornet
+effect: None
+reload_type: normal
+fire_type: smg
+ammo_type: Pistol
+fire_sound: item.machine_pistol.fire
+damage: 2
+reload_speed: 1.5
+fire_rate: 0.1
+ammo: 20
+spread: 1
