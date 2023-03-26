@@ -181,11 +181,14 @@ F (Swap Item Hand) to reload
 
 ## Future Plans
 - Adding Modern &amp; Past Weapons
-- Tutorial on making custom weapons
 - Grenades?
 - Artillery?
 
 ## Change Log
+
+### Ver 1.2.0
+- Tutorial on making custom weapons (Made by JasminDreasond)
+- The rocket launcher now has new effects and new sounds.
 
 ### Ver 1.1.3
 - Armor now mitigates damage received from damage dealt by guns
