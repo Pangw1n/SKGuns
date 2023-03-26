@@ -8,8 +8,17 @@ Weapon Name
 Weapon Effects
 
 ## Reload Type
+    normal
+    single
 
 ## Fire Type
+    normal
+    shotgun
+    smg
+    single
+    smg
+    rocket
+    lmg
 
 ## Ammo Type
     Pistol
@@ -21,6 +30,7 @@ Weapon Effects
     LMG
 
 ## Fire Sound
+If you created a weapon with a custom sound, you must enter the sound value here.
 
 ## Damage
 amount of damage a single shot does in half hearts or the power of the explosion if it is an explosive weapon
