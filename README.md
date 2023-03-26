@@ -50,21 +50,22 @@
 
 ## Commands
     /skgunsgive <player> <gun id>
-gives a gun
+Gives a gun
 
 <hr/>
 
     /skgunsgiveammo <player> <ammo type> <amount>
-gives ammo
+Gives ammo
 
 <hr/>
 
     /skgunsgivelistgunids
-sends a list of all valid gun ids and their names
+Sends a list of all valid gun ids and their names
 
 <hr/>
+
     /skgunsgivelisteffects
-sends a list of all valid gun effects
+Sends a list of all valid gun effects
 
 ## Arguments For Commands
 
