@@ -146,7 +146,7 @@ easond/SKGuns/blob/mai
 
 ## List Of Guns
 
-<strong>Pistols:</strong>
+### Pistols
 
 Peace Keeper
 
@@ -154,12 +154,7 @@ Beretta
 
 Hornet
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Pistols.png?raw=true" alt="Pistols.png">
-</div>
-</div>
 
 <strong>Rifles:</strong>
 
@@ -175,12 +170,7 @@ M16
 
 Musket
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Rifles.png?raw=true" alt="Rifles.png">
-</div>
-</div><strong>
 
 Shotguns:</strong>
 
@@ -190,12 +180,9 @@ Double Barrel
 
 Brass Punk
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
+
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/shotguns.png?raw=true" alt="Shotguns.png">
-</div>
-</div>
+
 
 <strong>Snipers:</strong>
 
@@ -205,12 +192,9 @@ Scout Rifle
 
 Rapid Fire Precision
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
+
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/snipers.png?raw=true" alt="Snipers.png">
-</div>
-</div>
+
 
 <strong>SMGs:</strong>
 
@@ -220,12 +204,7 @@ Torrent
 
 Pocket SMG
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/SMGs.png?raw=true" alt="SMGs.png">
-</div>
-</div>
 
 <strong>Launchers:</strong>
 
@@ -233,23 +212,13 @@ Rocket Launcher
 
 Grenade Launcher
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Launchers.png?raw=true" alt="Launchers.png">
-</div>
-</div>
 
 <strong>Machine Guns:</strong>
 
 Minigun
 
-<div>
-<button type="button"><span>Spoiler: <span>Image</span></span></button>
-<div>
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/machinegun1.png?raw=true" alt="machinegun1.png">
-</div>
-</div>
 
 
 
@@ -290,7 +259,7 @@ Minigun
 
 
 <div>
-<button type="button"><span>Spoiler: <span>Past Updates</span></span></button>
+
 <div><strong>Ver 1.1.2:</strong>
 
 - added new kind of weapon &amp; ammo: Machine Guns
