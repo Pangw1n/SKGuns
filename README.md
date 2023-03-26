@@ -57,16 +57,6 @@ Gives a gun
     /skgunsgiveammo <player> <ammo type> <amount>
 Gives ammo
 
-<hr/>
-
-    /skgunsgivelistgunids
-Sends a list of all valid gun ids and their names
-
-<hr/>
-
-    /skgunsgivelisteffects
-Sends a list of all valid gun effects
-
 ## Arguments For Commands
 
 ### Gun ID
