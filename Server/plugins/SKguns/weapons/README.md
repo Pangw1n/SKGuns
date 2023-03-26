@@ -50,3 +50,28 @@ maximum ammo in a gun
 
 ## Spread
 the amount the bullet might deviate from the crosshair
+
+<hr>
+
+# Gun ID
+    1 = Peace Keeper
+    2 = Beretta
+    3 = Hornet
+    11 = AK-1000
+    12 = MX-101
+    13 = Ranger
+    14 = AK-47
+    15 = M16
+    16 = Musket
+    21 = Ole Tongo
+    22 = Double Barrel
+    23 = Brass Punk
+    31 = Railgun
+    32 = Scout Rifle
+    33 = Rapid Fire Precision
+    41 = UNP
+    42 = Torrent
+    43 = Pocket SMG
+    51 = Rocket Launcher
+    52 = Grenade Launcher
+    61 = Minigun
