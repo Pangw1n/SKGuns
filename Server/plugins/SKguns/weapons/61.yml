@@ -1,0 +1,11 @@
+name: Minigun
+effect: None
+reload_type: normal
+fire_type: lmg
+ammo_type: LMG
+fire_sound: item.mini_gun.fire
+damage: 3
+reload_speed: 5
+fire_rate: 0
+ammo: 100
+spread: 1.5

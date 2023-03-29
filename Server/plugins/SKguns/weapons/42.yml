@@ -1,0 +1,11 @@
+name: Torrent
+effect: None
+reload_type: normal
+fire_type: smg
+ammo_type: SMG
+fire_sound: item.machine_pistol.fire
+damage: 2
+reload_speed: 1.5
+fire_rate: 0
+ammo: 30
+spread: 1

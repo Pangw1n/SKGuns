@@ -1,0 +1,11 @@
+name: Peace Keeper
+effect: None
+reload_type: single
+fire_type: normal
+ammo_type: Pistol
+fire_sound: item.machine_pistol.fire
+damage: 8 
+reload_speed: 0.5 
+fire_rate: 0.5
+ammo: 6 
+spread: 0.1

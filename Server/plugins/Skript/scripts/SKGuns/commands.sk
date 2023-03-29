@@ -1,0 +1,42 @@
+command /skgunsgive <player> <number>:
+	permission: skguns.skgunsgive, skguns.*
+	trigger:
+
+		set {_item} to createSkGunItem(arg-1, arg-2)
+		{_item} is set:
+			give {_item} to arg-1
+
+
+command /skgunsgiveammo <player> <text> <number>:
+	permission: skguns.skgunsgiveammo, skguns.*
+	trigger:
+		if arg-2 is "pistol":
+			set {_name} to "Pistol"
+			set {_id} to 1
+		else if arg-2 is "rifle":
+			set {_name} to "Rifle"
+			set {_id} to 2
+		else if arg-2 is "shotgun":
+			set {_name} to "Shotgun"
+			set {_id} to 4
+		else if arg-2 is "sniper":
+			set {_name} to "Sniper"
+			set {_id} to 3
+		else if arg-2 is "smg":
+			set {_name} to "SMG"
+			set {_id} to 5
+		else if arg-2 is "explosive":
+			set {_name} to "Explosive"
+			set {_id} to 6
+		else if arg-2 is "lmg":
+			set {_name} to "LMG"
+			set {_id} to 7
+		else:
+			send "Not a valid ammo type" to the player
+			stop
+		give arg-3 of iron nuggets named "%{_name}% Ammo" with custom model data {_id} to arg-1
+
+command /resetgun:
+	permission: skguns.resetgun, skguns.*
+	trigger:
+		set {skguns.%player's uuid%.reloading} to false

@@ -1,0 +1,11 @@
+name: Grenade Launcher
+effect: None
+reload_type: single
+fire_type: grenade
+ammo_type: Explosive
+fire_sound: item.grenade_launcher.fire
+damage: 5
+reload_speed: 1
+fire_rate: 1
+ammo: 5
+spread: 0.25

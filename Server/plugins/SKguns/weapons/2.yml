@@ -1,0 +1,11 @@
+name: Beretta
+effect: None
+reload_type: normal
+fire_type: normal
+ammo_type: Pistol
+fire_sound: item.machine_pistol.fire
+damage: 5
+reload_speed: 1.5
+fire_rate: 0.3
+ammo: 12
+spread: 0.5
