@@ -40,3 +40,4 @@ command /resetgun:
 	permission: skguns.resetgun, skguns.*
 	trigger:
 		set {skguns.%player's uuid%.reloading} to false
+		set {skgun.%player's uuid%.scoped} to false
