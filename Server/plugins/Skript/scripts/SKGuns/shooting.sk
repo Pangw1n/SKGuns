@@ -42,12 +42,16 @@ on projectile hit:
 		
 		wait 1 tick
 		
-		loop all entities in radius 5 of projectile:
-			set {_health} to health of loop-entity
-			set health of loop-entity to {_health} - {_damage}
+		loop all entities in radius 6 of projectile:
+			if loop-entity's gamemode is survival:
+				set {_health} to health of loop-entity
+				set health of loop-entity to {_health} - {_damage}
+			if loop-entity's gamemode is adventure:
+				set {_health} to health of loop-entity
+				set health of loop-entity to {_health} - {_damage}
 			
 		#	make shooter damage the loop-entity by 0
-			push loop-entity (direction from projectile to loop-entity) at speed {_damage} / 4
+			push loop-entity (direction from projectile to loop-entity) at speed {_damage} / 10
 			if loop-entity is alive:
 				if metadata value "Effect" of projectile is "Pyro":
 					ignite the loop-entity
@@ -71,11 +75,11 @@ on right click with diamond hoe:
 		
 	set {_fire_sound} to {_NBT}.getString("FireSound")
 	set {_Dmg} to {_NBT}.getInteger("Dmg")
-	set {_Firerate} to {_NBT}.getInteger("Firerate")
+	set {_Firerate} to {_NBT}.getDouble("Firerate")
 	set {_Ammo} to {_NBT}.getInteger("Ammo")
 	set {_Effect} to {_NBT}.getString("Effect")
 	set {_slot} to player's current hotbar slot id
-	set {_spread} to {_NBT}.getInteger("Spread")
+	set {_spread} to {_NBT}.getDouble("Spread")
 	
 	if {_Dmg} is not set:
 		stop
@@ -456,7 +460,7 @@ on swap item:
 			
 		#setting variables
 		set {_item} to player's held item
-		set {_Reload} to {_NBT}.getInteger("Reload")
+		set {_Reload} to {_NBT}.getDouble("Reload")
 		set {_MaxAmmo} to {_NBT}.getInteger("MaxAmmo")
 		set {_Ammo} to {_NBT}.getInteger("Ammo")
 		set {_AmmoType} to {_NBT}.getString("AmmoType")
@@ -612,7 +616,8 @@ on left click with diamond hoe:
 	player's held item is air:
 		stop
 	set {_NBT} to new NBTItem(player.getInventory().getItemInMainHand())
-	{_NBT}.setString("AmmoType", {_Type})
+	#{_NBT}.setString("AmmoType", {_Type})
+	set {_Type} to {_NBT}.getString("AmmoType")
 	if {_Type} is "Sniper":
 		if {skguns.%player's uuid%.reloading} is true:
 			stop

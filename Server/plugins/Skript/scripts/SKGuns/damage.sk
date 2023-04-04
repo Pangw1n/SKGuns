@@ -2,6 +2,10 @@ on damage:
 	if projectile exists:
 		if metadata "Damage" of projectile is set:
 			cancel event
+			if victim's gamemode is creative:
+				stop
+			if victim's gamemode is spectator:
+				stop
 			set {_dmg} to metadata value "Damage" of projectile / 2
 			set {_health} to health of victim
 			make attacker damage the victim by 0

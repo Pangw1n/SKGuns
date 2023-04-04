@@ -36,9 +36,9 @@ function createSkGunItem(player: player, id: number) :: item:
 		{_NBT}.setString("Effect", "%{_effect}%")
 		{_NBT}.setInteger("Dmg", {_damage})
 
-		{_NBT}.setInteger("Reload", {_reload})
-		{_NBT}.setInteger("Firerate", {_firerate})
-		{_NBT}.setInteger("Spread", {_spread})
+		{_NBT}.setDouble("Reload", {_reload})
+		{_NBT}.setDouble("Firerate", {_firerate})
+		{_NBT}.setDouble("Spread", {_spread})
 		
 		{_NBT}.setString("ReloadType", "%{_reloadtype}%")
 		{_NBT}.setString("AmmoType", "%{_ammotype}%")
