@@ -63,6 +63,14 @@
          }
       ]
    },
+   "item.skguns.awpfire": {
+      "replace": false,
+      "sounds": [
+         {
+            "name": "skguns:item/awpfire"
+         }
+      ]
+   },
    "item.shotgun.fire": {
       "replace": false,
       "sounds": [

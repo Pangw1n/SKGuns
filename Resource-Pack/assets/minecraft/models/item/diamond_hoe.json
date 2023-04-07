@@ -96,6 +96,12 @@
       },
       {
         "predicate": {
+          "custom_model_data": 34
+        },
+        "model": "skguns:item/skguns/sniper4"
+      },
+      {
+        "predicate": {
           "custom_model_data": 41
         },
         "model": "skguns:item/skguns/smg1"

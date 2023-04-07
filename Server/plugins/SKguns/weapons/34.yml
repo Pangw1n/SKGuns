@@ -1,0 +1,11 @@
+name: AWP
+effect: None
+reload_type: normal
+fire_type: single
+ammo_type: Sniper
+fire_sound: item.skguns.awpfire
+damage: 20
+reload_speed: 4
+fire_rate: 2
+ammo: 10
+spread: 1
