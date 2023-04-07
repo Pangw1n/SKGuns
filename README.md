@@ -109,7 +109,7 @@ F (Swap Item Hand) to reload
 - Rapid Fire Precision
 - AWP
 
-<img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Snipers.png?raw=true" alt="Snipers.png">
+<img src="https://github.com/Pangw1n/SKGuns/blob/main/img/Snipers.png">
 
 ### SMGs
 - UNP
