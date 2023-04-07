@@ -107,6 +107,7 @@ F (Swap Item Hand) to reload
 - Railgun
 - Scout Rifle
 - Rapid Fire Precision
+- AWP
 
 <img src="https://github.com/JasminDreasond/SKGuns/blob/main/img/Snipers.png?raw=true" alt="Snipers.png">
 
